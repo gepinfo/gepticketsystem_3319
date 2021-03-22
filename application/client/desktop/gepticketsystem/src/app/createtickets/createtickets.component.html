@@ -1,0 +1,40 @@
+<h2 class="screen-align">Createtickets</h2>
+<div id="template-itpk" class="row">
+    <div id="template-ik0o" class="cell">
+        <label id="template-imqt" class="label">name</label>
+        <input id="template-imqej" [(ngModel)]="ticktes.name" [ngModelOptions]="{standalone: true}"
+        class="input form-control" />
+    </div>
+    <div id="template-iyfj" class="cell">
+        <label id="template-i0hml" class="label">description</label>
+        <input id="template-id7zk" [(ngModel)]="ticktes.description"
+        [ngModelOptions]="{standalone: true}" class="input form-control" />
+    </div>
+    <div id="template-ic8i" class="cell">
+        <label id="template-ie6qf" class="label">service types</label>
+        <div id="template-izddq" class="">
+            <ng-select id="template-ikj0f" name="dynamicdropdown_template-ikj0f" [searchable]="true"
+            [virtualScroll]="true" [items]="servicetypesitemArray" bindLabel="name"
+            bindValue="name" [(ngModel)]="ticktes.types" [ngModelOptions]="{standalone: true}"
+            (click)="servicetypesGpGetAllValues()" class="form-control"></ng-select>
+        </div>
+    </div>
+</div>
+<div id="template-i1px" class="row">
+    <div id="template-i3pi" class="cell">
+        <label id="template-ipmdf" class="label">severity</label>
+        <div id="template-ixuyu" class="">
+            <ng-select id="template-i0sd3" name="dynamicdropdown_template-i0sd3" [searchable]="true"
+            [virtualScroll]="true" [items]="severityitemArray" bindLabel="name" bindValue="name"
+            [(ngModel)]="ticktes.severity" [ngModelOptions]="{standalone: true}" (click)="severityGpGetAllValues()"
+            class="form-control"></ng-select>
+        </div>
+        <button id="template-ixxnj" (click)="GpCreate()" class="button btn btn-primary">Create</button>
+    </div>
+    <div id="template-ik1j" class="cell">
+        <label id="template-iwds3" class="label">target</label>
+        <input id="template-id448" [(ngModel)]="ticktes.target"
+        [ngModelOptions]="{standalone: true}" class="input form-control" />
+    </div>
+    <div id="template-izr6" class="cell"></div>
+</div>
